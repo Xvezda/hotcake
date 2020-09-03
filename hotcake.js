@@ -5,23 +5,25 @@
  * license that can be found in the LICENSE file or at
  * https://opensource.org/licenses/MIT.
  */
-(function(window, document) {
+
+/* global XMLHttpRequest */
+(function (window, document) {
   var initialized = false;
 
-  function normalizeUrl(url) {
+  function normalizeUrl (url) {
     var virtualLink = document.createElement('a');
     virtualLink.href = url;
     return virtualLink.href;
   }
 
-  function poll(url, callback) {
+  function poll (url, callback) {
     var xhr = new XMLHttpRequest();
     var newUrl = url + ((url.indexOf('?') !== -1 ? '&' : '?') +
-      (new Date).getTime());
+      (new Date()).getTime());
     xhr.open('GET', newUrl);
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
-    xhr.onreadystatechange = function(event) {
+    xhr.onreadystatechange = function (event) {
       switch (xhr.readyState) {
         case XMLHttpRequest.DONE:
           callback(event.target.response, url);
@@ -35,16 +37,16 @@
     xhr.send(null);
   }
 
-  function Hotcake(options) {
+  function Hotcake (options) {
     initialized = true;
 
     var cache = {};
     var defaultOptions = {
       mode: 'parallel',
       observe: ['./'],
-      interval: 3000,
+      interval: 3000
     };
-    options = options || {}
+    options = options || {};
 
     for (var key in defaultOptions) {
       if (!(key in options)) {
@@ -52,9 +54,9 @@
       }
     }
 
-    function polling(url) {
-      setTimeout(function() {
-        poll(url, function(response) {
+    function polling (url) {
+      setTimeout(function () {
+        poll(url, function (response) {
           var key = normalizeUrl(url);
           var oldData = cache[key];
           var newData = response;
@@ -69,7 +71,7 @@
 
     // Initialize caches
     for (var i = 0; i < options.observe.length; ++i) {
-      poll(options.observe[i], function(response, url) {
+      poll(options.observe[i], function (response, url) {
         cache[normalizeUrl(url)] = response;
         polling(url);
       });
@@ -81,9 +83,9 @@
     window.Hotcake = Hotcake;
   }
 
-  window.onload = function(event) {
+  window.onload = function (event) {
     if (!initialized) {
-      window.Hotcake.o = new Hotcake();  // Active instance
+      window.Hotcake.o = new Hotcake(); // Active instance
     }
   };
 })(window, document);
