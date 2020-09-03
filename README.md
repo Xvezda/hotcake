@@ -8,4 +8,8 @@ Bring HMR-like auto refresh functionality without any server (e.g. `websocket`, 
 
 ## Installation
 
-TODO
+Add following tag to your html file.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/hotcake"></script>
+```
