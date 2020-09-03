@@ -14,7 +14,7 @@
   "license": "MIT",
   "scripts": {
     "start": "http-server -c-1 .",
-    "build": "terser -o hotcake.min.js hotcake.js",
+    "build": "terser -c -m -o hotcake.min.js hotcake.js",
     "test": "semistandard",
     "deploy": "gh-pages -d demo",
     "prepublish": "yarn test && yarn build"
