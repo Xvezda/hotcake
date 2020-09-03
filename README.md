@@ -31,7 +31,7 @@ If hotcake not initialized explicitly, it will initialized automatically with de
 
 ## Options
 
-| name | type | description | default |
-| ---- | ---- | ----------- | ------- |
-| observe | `string[]` | Path of files to observe. | `['./']` |
-| interval | `number` | Millisecond value of interval between requests. | `3000` |
+| name     | type       | description                                     | default  |
+| -------- | ---------- | ----------------------------------------------- | -------  |
+| observe  | `string[]` | Path of files to observe.                       | `['./']` |
+| interval | `number`   | Millisecond value of interval between requests. | `3000`   |
