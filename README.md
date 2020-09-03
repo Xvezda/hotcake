@@ -13,3 +13,25 @@ Add following tag to your html file.
 ```html
 <script src="https://cdn.jsdelivr.net/npm/hotcake"></script>
 ```
+
+## Usage
+
+After installation, you can explicitly initialize hotcake with options.
+
+```html
+<script>
+new Hotcake({
+    observe: ['./', './app.js'],
+    interval: 5000
+});
+</script>
+```
+
+If hotcake not initialized explicitly, it will initialized automatically with default options when window loaded.
+
+## Options
+
+| name | type | description | default |
+| ---- | ---- | ----------- | ------- |
+| observe | `string[]` | Path of files to observe. | `['./']` |
+| interval | `number` | Millisecond value of interval between requests. | `3000` |
