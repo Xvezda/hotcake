@@ -1,12 +1,14 @@
 {
   "name": "hotcake",
   "version": "0.0.1",
-  "description": "Bring easy auto reload to your web project right away.",
+  "description": "Bring simple auto reload to your web project right away.",
   "main": "hotcake.js",
   "repository": "git@github.com:Xvezda/hotcake.git",
   "author": "Xvezda <xvezda@naver.com>",
+  "keywords": [
+    "reload", "live-reload", "refresh", "polling"
+  ],
   "license": "MIT",
-  "private": true,
   "scripts": {
     "start": "http-server -c-1 .",
     "test": "semistandard",
