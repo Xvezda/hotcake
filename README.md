@@ -1,5 +1,6 @@
 # hotcake
 
+[![License](https://img.shields.io/npm/l/hotcake)](https://npm.im/hotcake)
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/standard/semistandard)
 
 Bring HMR-like auto refresh functionality without any server (e.g. `websocket`, `socket.io`, etc.) and keep it minimal, simple.
