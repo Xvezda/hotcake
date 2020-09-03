@@ -35,12 +35,13 @@
     xhr.send(null);
   }
 
-  function Eazel(options) {
+  function Hotcake(options) {
     initialized = true;
 
     var cache = {};
     var defaultOptions = {
-      targets: ['./'],
+      mode: 'parallel',
+      observe: ['./'],
       interval: 3000,
     };
     options = options || {}
@@ -76,13 +77,13 @@
   }
 
   // Expose
-  if (typeof window !== 'undefined' && !('Eazel' in window)) {
-    window.Eazel = Eazel;
+  if (typeof window !== 'undefined' && !('Hotcake' in window)) {
+    window.Hotcake = Hotcake;
   }
 
   window.onload = function(event) {
     if (!initialized) {
-      window.Eazel.o = new Eazel();  // Active instance
+      window.Hotcake.o = new Hotcake();  // Active instance
     }
   };
 })();
