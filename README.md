@@ -19,7 +19,7 @@ Add following tag to your html file.
 Or Via GitHub. (Not recommended)
 
 ```html
-<script src="https://github.com/Xvezda/hotcake/raw/master/hotcake.js"></script>
+<script src="https://raw.githack.com/Xvezda/hotcake/master/hotcake.js"></script>
 ```
 
 Or even with npm... (Also not recommended)
