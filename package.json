@@ -1,20 +1,28 @@
 {
   "name": "hotcake",
-  "version": "0.0.1",
-  "description": "Bring easy auto reload to your web project right away.",
-  "main": "hotcake.js",
+  "version": "1.0.0",
+  "description": "Bring simple auto reload to your web project right away.",
+  "main": "hotcake.min.js",
   "repository": "git@github.com:Xvezda/hotcake.git",
   "author": "Xvezda <xvezda@naver.com>",
+  "keywords": [
+    "reload",
+    "live-reload",
+    "refresh",
+    "polling"
+  ],
   "license": "MIT",
-  "private": true,
   "scripts": {
     "start": "http-server -c-1 .",
+    "build": "terser -c -m -o hotcake.min.js hotcake.js",
     "test": "semistandard",
-    "deploy": "gh-pages -d demo"
+    "deploy": "gh-pages -d demo",
+    "prepublish": "yarn test && yarn build"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "http-server": "^0.12.3",
-    "semistandard": "^14.2.3"
+    "semistandard": "^14.2.3",
+    "terser": "^5.2.1"
   }
 }
