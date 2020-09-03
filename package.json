@@ -2,7 +2,7 @@
   "name": "hotcake",
   "version": "1.0.0",
   "description": "Bring easy auto reload to your web project right away.",
-  "main": "index.js",
+  "main": "hotcake.js",
   "repository": "git@github.com:Xvezda/hotcake.git",
   "author": "Xvezda <xvezda@naver.com>",
   "license": "MIT",
