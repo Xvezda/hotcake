@@ -36,3 +36,9 @@ If hotcake not initialized explicitly, it will automatically initialize with def
 | -------- | ---------- | ----------------------------------------------- | -------  |
 | observe  | `string[]` | Path of files to observe.                       | `['./']` |
 | interval | `number`   | Millisecond value of interval between requests. | `3000`   |
+
+## License
+
+Copyright (C) 2020 Xvezda
+
+[MIT License](LICENSE)
