@@ -1,6 +1,6 @@
 {
   "name": "hotcake",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Bring simple auto reload to your web project right away.",
   "main": "hotcake.min.js",
   "repository": "git@github.com:Xvezda/hotcake.git",
