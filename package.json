@@ -6,17 +6,23 @@
   "repository": "git@github.com:Xvezda/hotcake.git",
   "author": "Xvezda <xvezda@naver.com>",
   "keywords": [
-    "reload", "live-reload", "refresh", "polling"
+    "reload",
+    "live-reload",
+    "refresh",
+    "polling"
   ],
   "license": "MIT",
   "scripts": {
     "start": "http-server -c-1 .",
+    "build": "terser -o hotcake.min.js hotcake.js",
     "test": "semistandard",
-    "deploy": "gh-pages -d demo"
+    "deploy": "gh-pages -d demo",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "http-server": "^0.12.3",
-    "semistandard": "^14.2.3"
+    "semistandard": "^14.2.3",
+    "terser": "^5.2.1"
   }
 }
