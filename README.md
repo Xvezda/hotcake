@@ -27,7 +27,7 @@ new Hotcake({
 </script>
 ```
 
-If hotcake not initialized explicitly, it will initialized automatically with default options when window loaded.
+If hotcake not initialized explicitly, it will automatically initialize with default options when window loaded.
 
 ## Options
 
