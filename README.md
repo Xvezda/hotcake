@@ -1,5 +1,6 @@
 # hotcake
 
+[![Version](https://img.shields.io/npm/v/hotcake)](https://npm.im/hotcake)
 [![License](https://img.shields.io/npm/l/hotcake)](https://npm.im/hotcake)
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/standard/semistandard)
 
@@ -13,6 +14,18 @@ Add following tag to your html file.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/hotcake"></script>
+```
+
+Or Via GitHub. (Not recommended)
+
+```html
+<script src="https://github.com/Xvezda/hotcake/raw/master/hotcake.js"></script>
+```
+
+Or even with npm... (Also not recommended)
+
+```sh
+npm install --save-dev hotcake
 ```
 
 ## Usage
